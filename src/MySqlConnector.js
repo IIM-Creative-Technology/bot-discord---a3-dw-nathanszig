@@ -1,10 +1,11 @@
 const mysql = require('mysql');
+require('dotenv').config()
 
 const connection = mysql.createConnection({
   host: process.env.DATABASE_HOST,
   user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATBASE_NAME
+  password: "",
+  database: 'cours-discord'
 });
 
 module.exports.connect = () => {
